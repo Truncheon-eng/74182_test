@@ -1,2 +1,24 @@
 # 74182_test
-This repository contains testbench file, checking the correctness of 16 bit ALU 74182
+В рамках тестового задания необходимо было проверить правильность работы арифметических и логических операций 16-битного АЛУ 74812.
+Модуль с тестовыми векторами находится в директории tb/alu_tb.sv, опкоды в tb/opcodes.vh.
+## Список проверенных арифметических операций
+- A plus B (сложение, с учётом флага carry_in)
+- A minus B (вычитание, с учётом флага carry_in)
+- A plus AB (с учётом флага carry_in)
+- A plus A (с учётом флага carry_in)
+## Список проверенных логических операций
+- A & B (логическое И)
+- A | B (логическое ИЛИ)
+- A ^ B (исключающее ИЛИ)
+- ~B (инверсия операнда B)
+В каждой оперции было предусмотрено по 6 тестов, покрывающих edgecase-ы, связанные например с переполнением при сложении, или с заёмом при вычитании.
+Кроме того в рамках проверки операции A plus AB были выявлены ошибки.
+```shell
+# Calucalation is correct:  4660 +  4660 & 65535 + 0 (carry_in) =  9320 (carry_out: 0)
+# Calucalation error: 43690 + 43690 & 21845 + 1 (carry_in) = (carry_out: 0, result: 43691) (cout: 0, expected: 21844)
+# Calucalation error: 61680 + 61680 &  3855 + 0 (carry_in) = (carry_out: 0, result: 61680) (cout: 0, expected:   256)
+# Calucalation error: 13107 + 13107 & 52428 + 1 (carry_in) = (carry_out: 0, result: 13108) (cout: 0, expected: 17476)
+# Calucalation error: 32769 + 32769 & 32767 + 0 (carry_in) = (carry_out: 0, result: 32770) (cout: 0, expected:     2)
+# Calucalation error: 57005 + 57005 & 48879 + 1 (carry_in) = (carry_out: 1, result: 32091) (cout: 0, expected: 48208)
+```
+Первый тест - верный, так как 65535 - есть ничто иное, как `0b1111111111111111`, все остальные 3 теста - неверные!
