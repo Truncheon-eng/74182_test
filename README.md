@@ -13,14 +13,13 @@
 - ~B (инверсия операнда B)
 
 
-В каждой оперции было предусмотрено по 6 тестов, покрывающих edgecase-ы, связанные например с переполнением при сложении, или с заёмом при вычитании.
-Кроме того в рамках проверки операции A plus AB были выявлены ошибки.
+Результаты тестов представлены в следующем виде:
 ```shell
-# Calucalation is correct:  4660 +  4660 & 65535 + 0 (carry_in) =  9320 (carry_out: 0)
-# Calucalation error: 43690 + 43690 & 21845 + 1 (carry_in) = (carry_out: 0, result: 43691) (cout: 0, expected: 21844)
-# Calucalation error: 61680 + 61680 &  3855 + 0 (carry_in) = (carry_out: 0, result: 61680) (cout: 0, expected:   256)
-# Calucalation error: 13107 + 13107 & 52428 + 1 (carry_in) = (carry_out: 0, result: 13108) (cout: 0, expected: 17476)
-# Calucalation error: 32769 + 32769 & 32767 + 0 (carry_in) = (carry_out: 0, result: 32770) (cout: 0, expected:     2)
-# Calucalation error: 57005 + 57005 & 48879 + 1 (carry_in) = (carry_out: 1, result: 32091) (cout: 0, expected: 48208)
+# Calucalation is correct: 21554 + 21554 + 1 (carry_in) = 43109 (carry_out: 0)
+# Calucalation is correct: 43690 + 43690 + 0 (carry_in) = 21844 (carry_out: 1)
+# Calucalation is correct: 61937 + 61937 + 1 (carry_in) = 58339 (carry_out: 1)
+# Calucalation is correct: 65263 + 65263 + 0 (carry_in) = 64990 (carry_out: 1)
+# Calucalation is correct:   257 +   257 + 1 (carry_in) =   515 (carry_out: 0)
+# Calucalation is correct: 56045 + 56045 + 0 (carry_in) = 46554 (carry_out: 1)
 ```
-Первый тест - верный, так как 65535 - есть ничто иное, как `0b1111111111111111`, все остальные 3 теста - неверные. Результат выхода АЛУ указан в отладочной информации, как `result` (вместе с `carry_out`(Cout)), `expected` - результат, посчитанный в рамках модуля tb.
+В случае с арифметическими операциями выводится информация о `carry_in` и `carry_out`, результат операции представлен в виде содержимого выхода АЛУ. При ошибке выводится дополнительная информация `cout, expected`, которые представляют из себя ничто иное, как флаг переноса и результат операции, посчитанный в рамках тестового модуля
