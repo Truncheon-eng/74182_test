@@ -187,7 +187,7 @@ module alu_tb;
 			#10;
 			case (code)
 				A_PLUS_A_AND_B_OP: begin
-					{cout, expected} = operand1 + operand1 & operand2 + Cin;
+					{cout, expected} = operand1 + (operand1 & operand2) + Cin;
 					if ({cout, expected} == {~alu_intf.carry_out, alu_intf.result}) begin
 						$display("Calucalation is correct: %d + %d & %d + %d (carry_in) = %d (carry_out: %d)", 
 							operand1, operand1, operand2, Cin, alu_intf.result, ~alu_intf.carry_out);
