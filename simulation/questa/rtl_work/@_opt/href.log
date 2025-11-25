@@ -1,0 +1,10 @@
+BEGIN 3:alu_if:fast__1:work
+    carry_out :  1:alu_tb:fast:work
+    stub_nGo :  1:alu_tb:fast:work
+    operand_a :  1:alu_tb:fast:work
+    carry_in :  1:alu_tb:fast:work
+    result :  1:alu_tb:fast:work
+    stub_nBo :  1:alu_tb:fast:work
+    operand_b :  1:alu_tb:fast:work
+    operation :  1:alu_tb:fast:work
+END 

@@ -1,0 +1,152 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/LABS/test/simulation/questa
+T_opt
+!s110 1764062680
+VP]=>6YQkSRAeS6T;9X2ng1
+04 6 4 work alu_tb fast 0
+=1-d8bbc1affe0a-692575d7-372-c50
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U8 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+valu_74181
+2C:/LABS/test/rtl/74181.v
+Z3 !s110 1764062678
+!i10b 1
+!s100 gcRSDJ[mf>^KTo6YURD3B1
+IEQPDY?gfWUcTonUL`MneQ2
+R1
+w1763671994
+8C:/LABS/test/rtl/74181.v
+FC:/LABS/test/rtl/74181.v
+!i122 2
+L0 29 138
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z6 !s108 1764062678.000000
+!s107 C:/LABS/test/rtl/74181.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/LABS/test/rtl|C:/LABS/test/rtl/74181.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+C:/LABS/test/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Yalu_if
+Z9 2C:/LABS/test/tb/alu_tb.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R3
+!i10b 1
+!s100 >hRVU4;zZYn0ZGXQzQlni2
+IZLDVL146bfG2O?1_C9VW=0
+S1
+R1
+Z11 w1764062660
+Z12 8C:/LABS/test/tb/alu_tb.sv
+Z13 FC:/LABS/test/tb/alu_tb.sv
+!i122 3
+L0 3 0
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z14 !s107 C:/LABS/test/tb/opcodes.vh|C:/LABS/test/tb/alu_tb.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/LABS/test/tb|C:/LABS/test/tb/alu_tb.sv|
+!i113 0
+Z16 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z17 !s92 -sv -work work +incdir+C:/LABS/test/tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu_tb
+R9
+R10
+R3
+!i10b 1
+!s100 9<`3=8fnXHK8cnBGicfWQ1
+I25hl8ORmRAa4Fa?EQb@XS3
+S1
+R1
+R11
+R12
+R13
+FC:/LABS/test/tb/opcodes.vh
+!i122 3
+L0 21 283
+R4
+R5
+r1
+!s85 0
+31
+R6
+R14
+R15
+!i113 0
+R16
+R17
+R2
+vcla_74182
+2C:/LABS/test/rtl/74182_CLA.v
+R3
+!i10b 1
+!s100 z;9<SY2g0KlFXdbPnBZgP2
+I^NEN6`iUOO`I@[`01:U]H0
+R1
+w1763671996
+8C:/LABS/test/rtl/74182_CLA.v
+FC:/LABS/test/rtl/74182_CLA.v
+!i122 1
+L0 5 24
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/LABS/test/rtl/74182_CLA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/LABS/test/rtl|C:/LABS/test/rtl/74182_CLA.v|
+!i113 0
+R7
+R8
+R2
+vtop_alu_16
+2C:/LABS/test/rtl/top_alu_16.v
+R3
+!i10b 1
+!s100 ;;[I3Rl3DMl??e?b5NKbn1
+IVYERAbHbIJPTA[6CFD5Za1
+R1
+w1763905853
+8C:/LABS/test/rtl/top_alu_16.v
+FC:/LABS/test/rtl/top_alu_16.v
+!i122 0
+L0 1 45
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/LABS/test/rtl/top_alu_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/LABS/test/rtl|C:/LABS/test/rtl/top_alu_16.v|
+!i113 0
+R7
+R8
+R2
