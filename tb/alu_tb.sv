@@ -26,7 +26,7 @@ module alu_tb;
 	
 	alu_if alu_intf();
 	
-	`include "opcodes.vh"	
+	`include "tb/opcodes.vh"
 	top_alu_16 alu_instance(
 		.a(alu_intf.operand_a),
 		.b(alu_intf.operand_b),
