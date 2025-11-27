@@ -26,50 +26,50 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/LABS/test/rtl {C:/LABS/test/rtl/top_alu_16.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 12:24:38 on Nov 25,2025
+# Start time: 13:15:26 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/LABS/test/rtl" C:/LABS/test/rtl/top_alu_16.v 
 # -- Compiling module top_alu_16
 # 
 # Top level modules:
 # 	top_alu_16
-# End time: 12:24:38 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:26 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/LABS/test/rtl {C:/LABS/test/rtl/74182_CLA.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 12:24:38 on Nov 25,2025
+# Start time: 13:15:26 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/LABS/test/rtl" C:/LABS/test/rtl/74182_CLA.v 
 # -- Compiling module cla_74182
 # 
 # Top level modules:
 # 	cla_74182
-# End time: 12:24:38 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:27 on Nov 25,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/LABS/test/rtl {C:/LABS/test/rtl/74181.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 12:24:38 on Nov 25,2025
+# Start time: 13:15:27 on Nov 25,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/LABS/test/rtl" C:/LABS/test/rtl/74181.v 
 # -- Compiling module alu_74181
 # 
 # Top level modules:
 # 	alu_74181
-# End time: 12:24:38 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:27 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/LABS/test/tb {C:/LABS/test/tb/alu_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 12:24:38 on Nov 25,2025
+# Start time: 13:15:27 on Nov 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/LABS/test/tb" C:/LABS/test/tb/alu_tb.sv 
 # -- Compiling interface alu_if
 # -- Compiling module alu_tb
 # 
 # Top level modules:
 # 	alu_tb
-# End time: 12:24:38 on Nov 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:27 on Nov 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  alu_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" alu_tb 
-# Start time: 12:24:39 on Nov 25,2025
+# Start time: 13:15:27 on Nov 25,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -97,11 +97,11 @@
 # ------ A_PLUS_A_OP TEST ------
 # ------ A + AB TEST ------
 # Calucalation is correct:  4660 +  4660 & 65535 + 0 (carry_in) =  9320 (carry_out: 0)
-# Calucalation error: 43690 + 43690 & 21845 + 1 (carry_in) = (carry_out: 0, result: 43691) (cout: 0, expected: 21844)
-# Calucalation error: 61680 + 61680 &  3855 + 0 (carry_in) = (carry_out: 0, result: 61680) (cout: 0, expected:   256)
-# Calucalation error: 13107 + 13107 & 52428 + 1 (carry_in) = (carry_out: 0, result: 13108) (cout: 0, expected: 17476)
-# Calucalation error: 32769 + 32769 & 32767 + 0 (carry_in) = (carry_out: 0, result: 32770) (cout: 0, expected:     2)
-# Calucalation error: 57005 + 57005 & 48879 + 1 (carry_in) = (carry_out: 1, result: 32091) (cout: 0, expected: 48208)
+# Calucalation is correct: 43690 + 43690 & 21845 + 1 (carry_in) = 43691 (carry_out: 0)
+# Calucalation is correct: 61680 + 61680 &  3855 + 0 (carry_in) = 61680 (carry_out: 0)
+# Calucalation is correct: 13107 + 13107 & 52428 + 1 (carry_in) = 13108 (carry_out: 0)
+# Calucalation is correct: 32769 + 32769 & 32767 + 0 (carry_in) = 32770 (carry_out: 0)
+# Calucalation is correct: 57005 + 57005 & 48879 + 1 (carry_in) = 32091 (carry_out: 1)
 # ------ A + AB TEST ------
 # ------ SUM TEST ------
 # Calucalation is correct:     1 +     1 + 0 (carry_in) =     2 (carry_out: 0)
@@ -151,10 +151,10 @@
 # Calucalation is correct: ~0b1111111111111111 = 0b0000000000000000 (carry_in: 1)
 # Calucalation is correct: ~0b1110111011101110 = 0b0001000100010001 (carry_in: 0)
 # ------ INV_B TEST ------
-# Passed_tests:          43, All tests:          48
+# Passed_tests:          48, All tests:          48
 # =====	END TEST  	=====
 # ** Note: $stop    : C:/LABS/test/tb/alu_tb.sv(293)
 #    Time: 480 ns  Iteration: 0  Instance: /alu_tb
 # Break in Module alu_tb at C:/LABS/test/tb/alu_tb.sv line 293
-# End time: 12:24:58 on Nov 25,2025, Elapsed time: 0:00:19
+# End time: 13:22:57 on Nov 25,2025, Elapsed time: 0:07:30
 # Errors: 0, Warnings: 1
