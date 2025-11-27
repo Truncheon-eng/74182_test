@@ -43,6 +43,8 @@ module alu_tb;
 	
 	task init;
 		begin
+			$dumpfile("waveforms/waveform.vcd");
+			$dumpvars(0, alu_instance);
 			alu_intf.operand_a = 16'b0;
 			alu_intf.operand_b = 16'b0;
 			alu_intf.carry_in = 1'b0;
